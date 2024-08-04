@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartCity Login</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Inter, sans-serif;
+        }
+        .login-container {
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            padding: 26px 0 0 51px;
+        }
+        .header-wrapper {
+            display: flex;
+            margin-left: 22px;
+            width: 100%;
+            max-width: 1175px;
+            gap: 20px;
+            justify-content: space-between;
+            font-size: 32px;
+        }
+        .brand-name {
+            color: #000;
+            font-weight: 600;
+            align-self: start;
+            margin-top: 13px;
+        }
+        .home-link {
+            color: #0b3957;
+            font-weight: 400;
+            text-decoration: none;
+        }
+        .main-content {
+            margin-top: 56px;
+        }
+        .content-wrapper {
+            gap: 20px;
+            display: flex;
+        }
+        .login-form-column {
+            display: flex;
+            flex-direction: column;
+            line-height: normal;
+            width: 39%;
+            margin-left: 0;
+        }
+        .login-form-container {
+            background-color: #fff;
+            display: flex;
+            margin-top: 43px;
+            flex-direction: column;
+            overflow: hidden;
+            color: #0b3957;
+            justify-content: center;
+            width: 100%;
+            padding: 10px 11px;
+            font-size: 28px;
+            font-weight: 400;
+        }
+        .login-form {
+            border-radius: 20px;
+            background-color: #bbd6e3;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            padding: 43px 66px 26px 21px;
+        }
+        .login-title {
+            font-size: 40px;
+            font-weight: 700;
+            margin-left: 11px;
+            margin-bottom: 40px;
+        }
+        .input-field {
+            border-radius: 20px;
+            background-color: #fff;
+            margin-top: 28px;
+            text-align: center;
+            padding: 18px 24px;
+            width: calc(100% - 48px);
+            border: none;
+            font-size: 28px;
+            color: #0b3957;
+        }
+        .input-field::placeholder {
+            color: #0b3957;
+        }
+        .forgot-password-link {
+            text-align: center;
+            margin-top: 24px;
+            color: #0b3957;
+            text-decoration: none;
+        }
+        .login-button {
+            border-radius: 20px;
+            background-color: #0b3957;
+            align-self: center;
+            margin-top: 43px;
+            font-size: 30px;
+            color: #fff;
+            font-weight: 700;
+            padding: 13px 36px;
+            border: none;
+            cursor: pointer;
+        }
+        .hero-column {
+            display: flex;
+            flex-direction: column;
+            line-height: normal;
+            width: 61%;
+            margin-left: 20px;
+        }
+        .hero-content {
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+            color: #0b3957;
+            font-size: 64px;
+            font-weight: 700;
+        }
+        .hero-text {
+            align-self: start;
+            z-index: 10;
+        }
+        .hero-image {
+            aspect-ratio: 1.27;
+            object-fit: contain;
+            object-position: center;
+            width: 100%;
+        }
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+        @media (max-width: 991px) {
+            .login-container {
+                padding-left: 20px;
+            }
+            .header-wrapper {
+                max-width: 100%;
+                white-space: initial;
+            }
+            .main-content {
+                max-width: 100%;
+                margin-top: 40px;
+            }
+            .content-wrapper {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+            }
+            .login-form-column,
+            .hero-column {
+                width: 100%;
+            }
+            .login-form-container {
+                margin-top: 40px;
+            }
+            .login-form {
+                padding: 43px 20px 26px;
+            }
+            .login-title {
+                margin-left: 10px;
+            }
+            .input-field {
+                width: calc(100% - 40px);
+            }
+            .forgot-password-link {
+                margin-left: 9px;
+            }
+            .login-button {
+                margin-top: 40px;
+                white-space: initial;
+                padding: 13px 20px;
+            }
+            .hero-content {
+                max-width: 100%;
+                margin-top: 40px;
+                font-size: 5px;
+            }
+            .hero-text {
+                max-width: 100%;
+                font-size: 5px;
+            }
+            .hero-image {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="login-container">
+        <header class="header-wrapper">
+            <h1 class="brand-name">SmartCity</h1>
+            <nav>
+                <a href="premium/">Premium</a><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/803a90ceaa233f5655b7b053aeba4cbbf8cb509919d065071beb9617edc3c5e5?apiKey=a116ddd38fca48bebf1b0ec748547571&&apiKey=a116ddd38fca48bebf1b0ec748547571" class="frame-image" alt="Frame image" />
+                <a href="community/">Community</a>
+                <a href="main/">Main</a>
+            </nav>
+        </header>
+        <main class="main-content">
+            <div class="content-wrapper">
+                <div class="login-form-column">
+                    <div class="login-form-container">
+                        <form class="login-form">
+                            {% csrf_token %}
+                            <h2 class="login-title">Login</h2>
+                            <label for="username" class="visually-hidden">Enter your username</label>
+                            <input type="username" id="username" class="input-field" placeholder="Enter your username" required>
+                            <label for="password" class="visually-hidden">Password</label>
+                            <input type="password" id="password" class="input-field" placeholder="Password" required>
+                            <a href="#" class="forgot-password-link">Forgot Password?</a>
+                            <button type="submit" class="login-button"><p><a href="dashboard.html">Login</a></p>></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="hero-column">
+                    <div class="hero-content">
+                        <h2 class="hero-text">One step away from seamless complaint reporting!</h2>
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9c5f6885d684787c84a61221187227f9abfc3b28e38fc617d549c544a7d4c7a6?apiKey=a116ddd38fca48bebf1b0ec748547571&&apiKey=a116ddd38fca48bebf1b0ec748547571" alt="Illustration of seamless complaint reporting" class="hero-image" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+</body>
+</html>

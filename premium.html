@@ -1,0 +1,219 @@
+
+<style>
+    .premium-section {
+      background-color: #9bc2ce;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      font-family: Inter, sans-serif;
+      color: #0b3957;
+    }
+    
+    .header {
+      background-color: #fff;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      gap: 20px;
+      font-size: 32px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 29px 30px 0;
+    }
+    
+    @media (max-width: 991px) {
+      .header {
+        max-width: 100%;
+        padding: 0 20px;
+      }
+    }
+    
+    .logo-container {
+      display: flex;
+      min-height: 65px;
+      align-items: center;
+      font-weight: 600;
+    }
+    
+    .logo {
+      aspect-ratio: 1.13;
+      object-fit: contain;
+      width: 44px;
+    }
+    
+    .brand-name {
+      width: 185px;
+    }
+    
+    .nav-container {
+      display: flex;
+      gap: 20px 26px;
+      font-weight: 400;
+    }
+    
+    @media (max-width: 991px) {
+      .nav-container {
+        max-width: 100%;
+      }
+    }
+    
+    .nav-item {
+      align-self: start;
+    }
+    
+    .logout-container {
+      display: flex;
+      align-items: center;
+    }
+    
+    .logout-icon {
+      aspect-ratio: 0.79;
+      object-fit: contain;
+      width: 33px;
+    }
+    
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      min-height: 708px;
+      margin-top: 28px;
+      width: 100%;
+      align-items: center;
+      font-weight: 700;
+      text-align: center;
+      padding: 23px 80px 110px;
+    }
+    
+    @media (max-width: 991px) {
+      .main-content {
+        max-width: 100%;
+        padding: 0 20px 100px;
+      }
+    }
+    
+    .background-image {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    
+    .content-wrapper {
+      position: relative;
+      display: flex;
+      margin-bottom: -22px;
+      width: 424px;
+      max-width: 100%;
+      flex-direction: column;
+    }
+    
+    @media (max-width: 991px) {
+      .content-wrapper {
+        margin-bottom: 10px;
+      }
+    }
+    
+    .title-container {
+      display: flex;
+      gap: 2px;
+      font-size: 40px;
+    }
+    
+    .title-logo {
+      aspect-ratio: 1.13;
+      object-fit: contain;
+      width: 44px;
+      align-self: start;
+      margin-top: 35px;
+    }
+    
+    .title-text {
+        font-size: 40px;
+    }
+    
+    .features-card {
+      border-radius: 20px;
+      background-color: #fff;
+      align-self: center;
+      display: flex;
+      width: 371px;
+      max-width: 100%;
+      flex-direction: column;
+      margin: 85px 0 0 10px;
+      padding: 47px 39px;
+    }
+    
+    @media (max-width: 991px) {
+      .features-card {
+        margin-top: 40px;
+        padding: 0 20px;
+      }
+    }
+    
+    .features-title {
+      font-size: 28px;
+      align-self: center;
+    }
+    
+    .features-description {
+      font-size: 24px;
+      margin-top: 50px;
+    }
+    
+    @media (max-width: 991px) {
+      .features-description {
+        margin-top: 40px;
+      }
+    }
+    
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    </style>
+    
+    <section class="premium-section">
+      <header class="header">
+        <div class="logo-container">
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/26037d35ddb29a7b7d3065c3d391f2a470f8d275d67e283365faa1453b28f297?apiKey=a116ddd38fca48bebf1b0ec748547571&&apiKey=a116ddd38fca48bebf1b0ec748547571" class="logo" alt="SmartCity Logo" />
+          <h1 class="brand-name">SmartCity</h1>
+        </div>
+        <nav class="nav-container">
+            <a href="premium/">Premium</a><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/803a90ceaa233f5655b7b053aeba4cbbf8cb509919d065071beb9617edc3c5e5?apiKey=a116ddd38fca48bebf1b0ec748547571&&apiKey=a116ddd38fca48bebf1b0ec748547571" class="frame-image" alt="Frame image" />
+            <a href="community/">Community</a>
+            <a href="main/">Main</a>
+            <a href="signin/">Login</a>
+            <a href="signup/">Sign Up</a>
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/5c21899beb670f801abbe6d5beee261edc709fa3ec5ac137f0b382c763bb359d?apiKey=a116ddd38fca48bebf1b0ec748547571&&apiKey=a116ddd38fca48bebf1b0ec748547571" class="logout-icon" alt="" />
+          </div>
+        </nav>
+      </header>
+      <main class="main-content">
+        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/3cb3e876b317a1b721e30aef5a723546bb00158932e48de2e6a71fafb613a664?apiKey=a116ddd38fca48bebf1b0ec748547571&&apiKey=a116ddd38fca48bebf1b0ec748547571" class="background-image" alt="Premium background" />
+        <div class="content-wrapper">
+          <div class="title-container">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/efdd507c9e6edb6763aa50c7097bbdf7850830231b92f5fcf6b9abfa19584724?apiKey=a116ddd38fca48bebf1b0ec748547571&&apiKey=a116ddd38fca48bebf1b0ec748547571" class="title-logo" alt="" />
+            <h2 class="title-text">SmartCity Premium</h2>
+          </div>
+          <article class="features-card">
+            <h3 class="features-title">FEATURES</h3>
+            <p class="features-description">
+              Access our Chatbot for prompt responses!
+              <br /><br />
+              Join Communities and connect with others here on SmartCity!
+              <br /><br />
+              Use our easy locator for My Area feature using Map API!
+            </p>
+          </article>
+        </div>
+      </main>
+    </section>
