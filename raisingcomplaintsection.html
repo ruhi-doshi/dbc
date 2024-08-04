@@ -1,0 +1,476 @@
+<style>
+    .complaint-section {
+      background-color: #fff;
+      display: flex;
+      padding-bottom: 41px;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .header {
+      background-color: #fff;
+      display: flex;
+      width: 100%;
+      gap: 20px;
+      color: #0b3957;
+      white-space: nowrap;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 27px 32px;
+      font: 32px Inter, sans-serif;
+    }
+    @media (max-width: 991px) {
+      .header {
+        max-width: 100%;
+        white-space: initial;
+        padding: 0 20px;
+      }
+    }
+    .logo-container {
+      align-self: start;
+      display: flex;
+      gap: 10px;
+      font-weight: 600;
+    }
+    @media (max-width: 991px) {
+      .logo-container {
+        white-space: initial;
+      }
+    }
+    .logo-image {
+      aspect-ratio: 1.13;
+      object-fit: contain;
+      object-position: center;
+      width: 44px;
+    }
+    .brand-name {
+      flex-grow: 1;
+      flex-basis: auto;
+      margin: auto 0;
+    }
+    .nav-container {
+        object-fit: contain;
+      object-position: center;
+      display: flex;
+      gap: 20px;
+      font-weight: 400;
+      justify-content: space-between;
+    }
+    @media (max-width: 991px) {
+      .nav-container {
+        white-space: initial;
+      }
+    }
+    .logout-container {
+      display: flex;
+      gap: 6px;
+    }
+    @media (max-width: 991px) {
+      .logout-container {
+        white-space: initial;
+      }
+    }
+    .logout-text {
+      flex-grow: 1;
+    }
+    .logout-icon {
+      aspect-ratio: 0.79;
+      object-fit: contain;
+      object-position: center;
+      width: 33px;
+    }
+    .main-content {
+      display: flex;
+      width: 100%;
+      padding-left: 80px;
+      flex-direction: column;
+    }
+    @media (max-width: 991px) {
+      .main-content {
+        max-width: 100%;
+        padding-left: 20px;
+      }
+    }
+    .hero-section {
+      border-radius: 20px;
+      background-color: #9bc2ce;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: start;
+      padding: 106px 80px 106px 0;
+    }
+    @media (max-width: 991px) {
+      .hero-section {
+        max-width: 100%;
+        padding: 100px 20px 0 0;
+      }
+    }
+    .hero-content {
+      display: flex;
+      width: 662px;
+      max-width: 100%;
+      gap: 20px 52px;
+      flex-wrap: wrap;
+    }
+    .icon-container {
+      border-radius: 10px;
+      background-color: #0b3957;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: auto 0;
+      padding: 11px 28px;
+    }
+    @media (max-width: 991px) {
+      .icon-container {
+        padding: 0 20px;
+      }
+    }
+    .hero-icon {
+      aspect-ratio: 1.82;
+      object-fit: contain;
+      object-position: center;
+      width: 62px;
+    }
+    .hero-title {
+      color: #fff;
+      flex-grow: 1;
+      flex-basis: auto;
+      font: 700 64px Inter, sans-serif;
+    }
+    @media (max-width: 991px) {
+      .hero-title {
+        max-width: 100%;
+        font-size: 40px;
+      }
+    }
+    .hero-subtitle {
+      color: #fff;
+      margin: 12px 0 0 153px;
+      font: 400 28px Inter, sans-serif;
+    }
+    @media (max-width: 991px) {
+      .hero-subtitle {
+        margin-left: 10px;
+      }
+    }
+    .form-container {
+      margin-top: 29px;
+      width: 100%;
+      max-width: 1143px;
+    }
+    @media (max-width: 991px) {
+      .form-container {
+        max-width: 100%;
+      }
+    }
+    .form-content {
+      gap: 20px;
+      display: flex;
+    }
+    @media (max-width: 991px) {
+      .form-content {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0px;
+      }
+    }
+    .form-column {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 57%;
+      margin-left: 0px;
+    }
+    @media (max-width: 991px) {
+      .form-column {
+        width: 100%;
+      }
+    }
+    .form {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: start;
+      color: #0b3957;
+      font: 400 28px Inter, sans-serif;
+    }
+    @media (max-width: 991px) {
+      .form {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+    }
+    .form-input {
+      border-radius: 10px;
+      background-color: #fff;
+      align-self: stretch;
+      display: flex;
+      margin-top: 21px;
+      width: 100%;
+      height: 46px;
+      border: 1px solid #0b3957;
+      padding: 10px;
+      font-size: 16px;
+    }
+    .form-label {
+      margin-top: 33px;
+    }
+    .form-textarea {
+      border-radius: 10px;
+      background-color: #fff;
+      align-self: stretch;
+      display: flex;
+      margin-top: 6px;
+      width: 100%;
+      height: 145px;
+      border: 1px solid #0b3957;
+      padding: 10px;
+      font-size: 16px;
+      resize: vertical;
+    }
+    .upload-container {
+      border-radius: 10px;
+      background-color: #bbd6e3;
+      align-self: stretch;
+      display: flex;
+      margin-top: 23px;
+      align-items: flex-start;
+      gap: 20px 32px;
+      font-size: 20px;
+      text-align: center;
+      flex-wrap: wrap;
+      padding: 26px 6px 9px 66px;
+    }
+    @media (max-width: 991px) {
+      .upload-container {
+        padding-left: 20px;
+      }
+    }
+    .upload-content {
+      align-self: start;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      flex-basis: 0;
+      width: fit-content;
+    }
+    @media (max-width: 991px) {
+      .upload-content {
+        max-width: 100%;
+      }
+    }
+    .file-select {
+      align-self: center;
+      display: flex;
+      margin-top: 22px;
+      gap: 7px;
+    }
+    .file-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 48px;
+    }
+    .file-input {
+      display: none;
+    }
+    .file-button {
+      border-radius: 10px;
+      background-color: #fff;
+      align-self: start;
+      margin-top: 9px;
+      padding: 10px 12px;
+      cursor: pointer;
+      border: none;
+      font-size: 16px;
+    }
+    .upload-image {
+      aspect-ratio: 0.98;
+      object-fit: contain;
+      object-position: center;
+      width: 42px;
+      align-self: end;
+      margin-top: 101px;
+    }
+    @media (max-width: 991px) {
+      .upload-image {
+        margin-top: 40px;
+      }
+    }
+    .submit-button {
+      border-radius: 20px;
+      background-color: #0b3957;
+      margin-top: 23px;
+      color: #fff;
+      white-space: nowrap;
+      padding: 17px 27px;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    @media (max-width: 991px) {
+      .submit-button {
+        white-space: initial;
+        padding: 0 20px;
+      }
+    }
+    .tickets-column {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 43%;
+      margin-left: 20px;
+    }
+    @media (max-width: 991px) {
+      .tickets-column {
+        width: 100%;
+      }
+    }
+    .tickets-container {
+      display: flex;
+      gap: 16px;
+      align-self: stretch;
+      margin: auto 0;
+      font: 400 28px Inter, sans-serif;
+    }
+    @media (max-width: 991px) {
+      .tickets-container {
+        margin-top: 40px;
+      }
+    }
+    .tickets-divider {
+      width: 5px;
+      height: 572px;
+      background-color: #0b3957;
+    }
+    .tickets-content {
+      align-self: start;
+      display: flex;
+      margin-top: 6px;
+      flex-direction: column;
+      align-items: center;
+      flex-grow: 1;
+      flex-basis: 0;
+      width: fit-content;
+    }
+    @media (max-width: 991px) {
+      .tickets-content {
+        max-width: 100%;
+      }
+    }
+    .tickets-icon {
+      aspect-ratio: 1.05;
+      object-fit: contain;
+      object-position: center;
+      width: 63px;
+      margin-left: 17px;
+    }
+    .tickets-text {
+      color: #0b3957;
+      text-align: center;
+      margin: 41px 0 0 17px;
+    }
+    @media (max-width: 991px) {
+      .tickets-text {
+        margin-top: 40px;
+      }
+    }
+    .tickets-button {
+      align-self: stretch;
+      border-radius: 20px;
+      background-color: #0b3957;
+      min-height: 44px;
+      gap: 10px;
+      color: #fff;
+      margin: 22px 0 0 17px;
+      padding: 5px 7px;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    .tickets-image {
+      aspect-ratio: 1.36;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+      align-self: stretch;
+      margin-top: 7px;
+    }
+    @media (max-width: 991px) {
+      .tickets-image {
+        max-width: 100%;
+      }
+    }
+    </style>
+    <section class="complaint-section">
+      <header class="header">
+        <div class="logo-container">
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e147569c27d0a95f6bb2809b03f593cd86a590621ce2497f1c1655e2f0b901cb?apiKey=a116ddd38fca48bebf1b0ec748547571&&apiKey=a116ddd38fca48bebf1b0ec748547571" class="logo-image" alt="SmartCity Logo" />
+          <h1 class="brand-name">SmartCity</h1>
+        </div>
+        <div class="nav-container">
+            <a href="premium.html">Premium</a><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/803a90ceaa233f5655b7b053aeba4cbbf8cb509919d065071beb9617edc3c5e5?apiKey=a116ddd38fca48bebf1b0ec748547571&&apiKey=a116ddd38fca48bebf1b0ec748547571" class="frame-image" alt="Frame image" />
+          <a href="community.html">Community</a>
+            <a href="dashboard.html">Home</a>
+          <div class="logout-container">
+            <span class="logout-text"><a href="login.html">Log out</a></span>
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/84c33f7b4a470a459550c43352805500b77ebf8e9d78515ed004ee885780567c?apiKey=a116ddd38fca48bebf1b0ec748547571&&apiKey=a116ddd38fca48bebf1b0ec748547571" class="logout-icon" alt="Logout Icon" />
+          </div>
+        </div>
+      </header>
+      <main class="main-content">
+        <section class="hero-section">
+          <div class="hero-content">
+            <div class="icon-container">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7f3841e10537c0cad9413fe13a3bcdf8bc89c5fe1216facfd1ec55f8529306e2?apiKey=a116ddd38fca48bebf1b0ec748547571&&apiKey=a116ddd38fca48bebf1b0ec748547571" class="hero-icon" alt="Raising a ticket icon" />
+            </div>
+            <div class="hero-title"> <a href="dashboard.html">Raising a Ticket</a>
+          </div>
+          <p class="hero-subtitle">Report with ease</p>
+        </section>
+        <div class="form-container">
+          <div class="form-content">
+            <div class="form-column">
+              <form class="form" id="complaintForm">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" class="form-input" required />
+                <label for="location" class="form-label">Location</label>
+                <input type="text" id="location" name="location" class="form-input" required />
+                <label for="description" class="form-label">Description</label>
+                <textarea id="description" name="description" class="form-textarea" required></textarea>
+                <label for="upload-image" class="form-label">Upload Image</label>
+                <div class="upload-container">
+                  <div class="upload-content">
+                    <p class="upload-instructions">
+                      Kindly ensure the uploaded image is geotagged.<br />
+                      Upload jpeg. file upto 5MB.
+                    </p>
+                    <div class="file-select">
+                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/a4c03aa27c012baac0f28e8429e277813846d88775da64a2b903f2ca8ebf9ec8?apiKey=a116ddd38fca48bebf1b0ec748547571&&apiKey=a116ddd38fca48bebf1b0ec748547571" class="file-icon" alt="File upload icon" />
+                      <input type="file" id="upload-image" name="upload-image" class="file-input" accept=".jpeg,.jpg" required />
+                      <label for="upload-image" class="file-button">Select file</label>
+                    </div>
+                  </div>
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/debbd46f524690860ff2ffe381a3e0bbf30061d14d4e4b714f1336bceacdb2cb?apiKey=a116ddd38fca48bebf1b0ec748547571&&apiKey=a116ddd38fca48bebf1b0ec748547571" class="upload-image" alt="Upload image illustration" />
+                </div>
+                <button type="submit" class="submit-button">Submit</button>
+              </form>
+            </div>
+            <div class="tickets-column">
+              <div class="tickets-container">
+                <div class="tickets-divider"></div>
+                <div class="tickets-content">
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e00f3939dcfbaf119685151fbc9c8e543ed38ab967caef8561f4c449cec1bd83?apiKey=a116ddd38fca48bebf1b0ec748547571&&apiKey=a116ddd38fca48bebf1b0ec748547571" class="tickets-icon" alt="Tickets icon" />
+                  <p class="tickets-text">View previously raised tickets</p>
+                  <button class="tickets-button"> <a href="myticketssection.html">My Tickets</a></button>
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/2b1be5f23410cfe02db9f72a20a00cb2f47663622880f82bc21c5b4e5bd0d016?apiKey=a116ddd38fca48bebf1b0ec748547571&&apiKey=a116ddd38fca48bebf1b0ec748547571" class="tickets-image" alt="Tickets illustration" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+    <script>

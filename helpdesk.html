@@ -1,0 +1,535 @@
+<style>
+  .help-desk {
+    background-color: #9bc2ce;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+  }
+  
+  .header {
+    background-color: #fff;
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    color: #0b3957;
+    white-space: nowrap;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 24px 63px 7px 30px;
+    font: 32px Inter, sans-serif;
+  }
+  
+  @media (max-width: 991px) {
+    .header {
+      max-width: 100%;
+      white-space: initial;
+      padding: 0 20px;
+    }
+  }
+  
+  .logo-container {
+    display: flex;
+    min-height: 65px;
+    align-items: start;
+    font-weight: 600;
+    justify-content: start;
+  }
+  
+  @media (max-width: 991px) {
+    .logo-container {
+      white-space: initial;
+    }
+  }
+  
+  .logo-image {
+    aspect-ratio: 1.13;
+    object-fit: contain;
+    object-position: center;
+    width: 44px;
+  }
+  
+  .brand-name {
+    width: 185px;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px 26px;
+    font-weight: 400;
+    flex-wrap: wrap;
+    margin: auto 0;
+  }
+  
+  @media (max-width: 991px) {
+    .nav-links {
+      max-width: 100%;
+      white-space: initial;
+    }
+  }
+  
+  .nav-item {
+    align-self: start;
+  }
+  
+  @media (max-width: 991px) {
+    .nav-item {
+      white-space: initial;
+    }
+  }
+  
+  .nav-item-grow {
+    flex-grow: 1;
+    flex-basis: auto;
+  }
+  
+  .main-content {
+    display: flex;
+    margin-top: 58px;
+    width: 100%;
+    flex-direction: column;
+    padding: 0 27px 0 63px;
+  }
+  
+  @media (max-width: 991px) {
+    .main-content {
+      max-width: 100%;
+      margin-top: 40px;
+      padding: 0 20px;
+    }
+  }
+  
+  .help-desk-header {
+    display: flex;
+    width: 685px;
+    max-width: 100%;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .help-desk-icon {
+    border-radius: 10px;
+    background-color: #0b3957;
+    align-self: start;
+    display: flex;
+    margin-top: 6px;
+    min-height: 55px;
+    flex-direction: column;
+    justify-content: center;
+    padding: 11px 39px;
+  }
+  
+  @media (max-width: 991px) {
+    .help-desk-icon {
+      padding: 0 20px;
+    }
+  }
+  
+  .help-desk-image {
+    aspect-ratio: 1.82;
+    object-fit: contain;
+    object-position: center;
+    width: 62px;
+  }
+  
+  .help-desk-title {
+    color: #fff;
+    font: 700 56px Inter, sans-serif;
+  }
+  
+  @media (max-width: 991px) {
+    .help-desk-title {
+      font-size: 40px;
+    }
+  }
+  
+  .content-wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-right:170px;
+  }
+  
+  @media (max-width: 991px) {
+    .content-wrapper {
+      max-width: 100%;
+    }
+  }
+  
+  .search-section {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+  }
+  
+  @media (max-width: 991px) {
+    .search-section {
+      max-width: 100%;
+    }
+  }
+  
+  .search-container {
+    display: flex;
+    width: 100%;
+    padding-left: 63px;
+    flex-direction: column;
+    font-family: Inter, sans-serif;
+    margin-bottom: 200px;
+  }
+  
+  @media (max-width: 991px) {
+    .search-container {
+      max-width: 100%;
+      padding-left: 20px;
+    }
+  }
+  
+  .search-title {
+    color: #0b3957;
+    font-size: 35px;
+    font-weight: 400;
+    text-align: center;
+    align-self: start;
+    margin-left: 15px;
+  }
+  
+  @media (max-width: 991px) {
+    .search-title {
+      margin-left: 10px;
+    }
+  }
+  
+  .search-form {
+    display: flex;
+    margin-top: 13px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .search-input {
+    border-radius: 20px;
+    background-color: #fff;
+    font-size: 28px;
+    color: rgba(11, 57, 87, 0.7);
+    font-weight: 400;
+    text-align: center;
+    flex-grow: 1;
+    width: fit-content;
+    padding: 14px 20px 7px;
+  }
+  
+  @media (max-width: 991px) {
+    .search-input {
+      max-width: 100%;
+    }
+  }
+  
+  .search-button {
+    border-radius: 20px;
+    background-color: #0b3957;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+    white-space: nowrap;
+    margin: auto 0;
+    padding: 14px 22px;
+  }
+  
+  @media (max-width: 991px) {
+    .search-button {
+      white-space: initial;
+      padding: 0 20px;
+    }
+  }
+  
+  .amenities-section {
+    margin-top: 84px;
+  }
+  
+  @media (max-width: 991px) {
+    .amenities-section {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+  
+  .amenities-grid {
+    gap: 20px;
+    display: flex;
+  }
+  
+  @media (max-width: 991px) {
+    .amenities-grid {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0px;
+    }
+  }
+  
+  .amenity-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 25%;
+    margin-left: 0px;
+  }
+  
+  @media (max-width: 991px) {
+    .amenity-column {
+      width: 100%;
+    }
+  }
+  
+  .amenity-image {
+    aspect-ratio: 1.29;
+    object-fit: contain;
+    object-position: center;
+    width: 168px;
+    max-width: 100%;
+  }
+  
+  @media (max-width: 991px) {
+    .amenity-image {
+      margin-top: 40px;
+    }
+  }
+  
+  .amenity-column-2 {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 25%;
+    margin-left: 20px;
+  }
+  
+  @media (max-width: 991px) {
+    .amenity-column-2 {
+      width: 100%;
+    }
+  }
+  
+  .amenity-image-2 {
+    aspect-ratio: 1.03;
+    object-fit: contain;
+    object-position: center;
+    width: 134px;
+    margin-top: 9px;
+    max-width: 100%;
+    flex-grow: 1;
+  }
+  
+  @media (max-width: 991px) {
+    .amenity-image-2 {
+      margin-top: 40px;
+    }
+  }
+  
+  .amenity-column-3 {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 25%;
+    margin-left: 20px;
+  }
+  
+  @media (max-width: 991px) {
+    .amenity-column-3 {
+      width: 100%;
+    }
+  }
+  
+  .amenity-image-3 {
+    aspect-ratio: 0.99;
+    object-fit: contain;
+    object-position: center;
+    width: 129px;
+    max-width: 100%;
+    flex-grow: 1;
+    align-self: stretch;
+    margin: auto 0;
+  }
+  
+  @media (max-width: 991px) {
+    .amenity-image-3 {
+      margin-top: 40px;
+    }
+  }
+  
+  .amenity-column-4 {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 25%;
+    margin-left: 20px;
+  }
+  
+  @media (max-width: 991px) {
+    .amenity-column-4 {
+      width: 100%;
+    }
+  }
+  
+  .amenity-image-4 {
+    aspect-ratio: 1.04;
+    object-fit: contain;
+    object-position: center;
+    width: 135px;
+    max-width: 100%;
+  }
+  
+  @media (max-width: 991px) {
+    .amenity-image-4 {
+      margin-top: 40px;
+    }
+  }
+  
+  .divider {
+    width: 2px;
+    height: 490px;
+  }
+  
+  .chatbot-section {
+    align-self: start;
+    display: flex;
+    margin-top: 200px;
+    flex-direction: column;
+    color: #0b3957;
+    font: 400 28px Inter, sans-serif;
+  }
+  
+  .chatbot-image {
+    aspect-ratio: 0.6;
+    object-fit: contain;
+    object-position: right;
+    width: 107px;
+    align-self: center;
+    max-width: 100%;
+    margin-top: 200px;
+  }
+  
+  .chatbot-title {
+    font-weight: 700;
+    align-self: center;
+    margin-top: 9px;
+  }
+  
+  .chatbot-description {
+    text-align: center;
+    margin-top: 49px;
+    width: 257px;
+    margin-left: 40px;
+  }
+  
+  @media (max-width: 991px) {
+    .chatbot-description {
+      margin-top: 40px;
+    }
+  }
+  
+  .chatbot-input {
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    margin-top: 36px;
+    padding-left: 20px;
+    gap: 20px;
+    color: rgba(11, 57, 87, 0.7);
+    text-align: center;
+    justify-content: space-between;
+  }
+  
+  .chatbot-placeholder {
+          margin: auto 0;
+          width: 100%; 
+          padding: 10px;
+          box-sizing: border-box; 
+          font-size: 18px;
+      }
+  
+  .chatbot-send {
+    aspect-ratio: 0.94;
+    object-fit: contain;
+    object-position: center;
+    width: 47px;
+    border-radius: 0px 10px 10px 0px;
+  }
+  
+  .footer {
+    background-color: #fff;
+    margin-top: 27px;
+    color: #0b3957;
+    text-align: center;
+    padding: 37px 38px;
+    font: 400 28px Inter, sans-serif;
+  }
+  
+  @media (max-width: 991px) {
+    .footer {
+      max-width: 100%;
+      margin-right: 5px;
+      padding: 0 20px;
+    }
+  }
+  </style>
+  
+  <section class="help-desk">
+    <header class="header">
+      <div class="logo-container">
+        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/26037d35ddb29a7b7d3065c3d391f2a470f8d275d67e283365faa1453b28f297?apiKey=a116ddd38fca48bebf1b0ec748547571&&apiKey=a116ddd38fca48bebf1b0ec748547571" class="logo-image" alt="SmartCity Logo" />
+        <h1 class="brand-name">SmartCity</h1>
+      </div>
+      <nav class="nav-links">
+        <a href="premium.html">Premium</a><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/803a90ceaa233f5655b7b053aeba4cbbf8cb509919d065071beb9617edc3c5e5?apiKey=a116ddd38fca48bebf1b0ec748547571&&apiKey=a116ddd38fca48bebf1b0ec748547571" class="frame-image" alt="Frame image" />
+        <a href="community.html">Community</a>
+        <a href="dashboard.html">Home</a>
+        <a href="login.html">Log out</a>
+      </nav>
+    </header>
+    <main class="main-content">
+      <div class="help-desk-header">
+        <div class="help-desk-icon">
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7f3841e10537c0cad9413fe13a3bcdf8bc89c5fe1216facfd1ec55f8529306e2?apiKey=a116ddd38fca48bebf1b0ec748547571&&apiKey=a116ddd38fca48bebf1b0ec748547571" class="help-desk-image" alt="Help Desk Icon" />
+        </div>
+        <h2 class="help-desk-title"> <a href="dashboard.html">Help Desk</a></h2>
+      </div>
+      <div class="content-wrapper">
+        <section class="search-section">
+          <div class="search-container">
+            <h3 class="search-title">Search for amenities near you</h3>
+            <form class="search-form">
+              <input type="text" class="search-input" placeholder="Hospitals, Petrol Stations, Restaurants" aria-label="Search for amenities" />
+              <button type="submit" class="search-button">Search</button>
+            </form>
+          </div>
+          <div class="amenities-section">
+            <div class="amenities-grid">
+              <div class="amenity-column">
+                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7847dba4d6fb7dcb23b6aaa9416a06487cf7d242a43f5f281595d0b3cf4592c4?apiKey=a116ddd38fca48bebf1b0ec748547571&&apiKey=a116ddd38fca48bebf1b0ec748547571" class="amenity-image" alt="Amenity 1" />
+              </div>
+              <div class="amenity-column-2">
+                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/28c2faacf24beae8e303b233d28cb3e9e27b3ebe82ed4e5211afb67d699ac0df?apiKey=a116ddd38fca48bebf1b0ec748547571&&apiKey=a116ddd38fca48bebf1b0ec748547571" class="amenity-image-2" alt="Amenity 2" />
+              </div>
+              <div class="amenity-column-3">
+                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f5acc04972d456c4125aacd10080180c9aa0a746559323b93f8b0812c74048d4?apiKey=a116ddd38fca48bebf1b0ec748547571&&apiKey=a116ddd38fca48bebf1b0ec748547571" class="amenity-image-3" alt="Amenity 3" />
+              </div>
+              <div class="amenity-column-4">
+                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/fac2e39dbed3818db726fd6bb040baf4d34c46607565a9976ef8e87a15f377cc?apiKey=a116ddd38fca48bebf1b0ec748547571&&apiKey=a116ddd38fca48bebf1b0ec748547571" class="amenity-image-4" alt="Amenity 4" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="divider"></div>
+        <section class="chatbot-section">
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/c7f0fa17eb19cabdb48b6d096486cbb7fc8f10583a6591711262122441297ace?apiKey=a116ddd38fca48bebf1b0ec748547571&&apiKey=a116ddd38fca48bebf1b0ec748547571" class="chatbot-image" alt="Chatbot Icon" />
+          <h3 class="chatbot-title"><a href="https://colab.research.google.com/drive/1yElbX9asho4qd34ZZrjZQVtRlLgDJOO3?usp=sharing">Chatbot</a></h3>
+          <p class="chatbot-description">Answering your queries promptly and practically!</p>
+          <div class="chatbot-input">
+              </button>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      CONTACT US : smartcity@gmail.com
+    </footer>
+  </section>
